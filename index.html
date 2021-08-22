@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <style>
+        /*source: https://stackoverflow.com/a/19027949 */
+html, body {
+    height: 100%;
+}
+body {
+    margin: 0;
+}
+.flex-container {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.row {
+    width: auto;
+}
+.flex-item {
+    padding: 5px;
+    margin: 10px;
+    line-height: 20px;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+}
+
+.title {
+  position: relative;
+  color: #262626;
+  padding: 20px 50px;
+  font-size: larger;
+}
+ 
+
+    </style>
+</head>
+
+<body>
+    <div class="flex-container">
+        <div class="row"> 
+            <div class="flex-item " id="bidud">?נגמר הבידוד</div>
+            <div class="flex-item title" id="not_yet" style="visibility: hidden;">Not yet!</div>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById("bidud").addEventListener("click", () => {
+            document.getElementById("not_yet").style.visibility = "visible";
+        })
+    </script>
+</body>
+
+</html>
