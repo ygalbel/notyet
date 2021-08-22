@@ -3,54 +3,69 @@
 <head>
     <style>
         /*source: https://stackoverflow.com/a/19027949 */
-html, body {
-    height: 100%;
-}
-body {
-    margin: 0;
-}
-.flex-container {
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.row {
-    width: auto;
-}
-.flex-item {
-    padding: 5px;
-    margin: 10px;
-    line-height: 20px;
-    font-weight: bold;
-    font-size: 2em;
-    text-align: center;
-}
+        html,
+        body {
+            height: 100%;
+            color: aliceblue;
+            font-size: 50px;
+            font-weight: 100;
+        }
 
-.title {
-  position: relative;
-  color: #262626;
-  padding: 20px 50px;
-  font-size: larger;
-}
- 
+        .container {
+            margin: 0;
+            background-image: url("./wide.jpg");
+            background-position: 0%;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
 
+        .flex-container {
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .row {
+            width: auto;
+        }
+
+        .flex-item {
+            padding: 5px;
+            margin: 10px;
+            line-height: 20px;
+            font-size: 2em;
+            text-align: center;
+        }
+
+        .title {
+            position: relative;
+            color: #262626;
+            padding: 80px 50px;
+            font-size: larger;
+            font-weight: 600;
+            
+        }
     </style>
 </head>
 
 <body>
-    <div class="flex-container">
-        <div class="row"> 
-            <div class="flex-item " id="bidud">?נגמר הבידוד</div>
-            <div class="flex-item title" id="not_yet" style="visibility: hidden;">Not yet!</div>
+    <div class="container">
+        <div class="flex-container">
+            <div class="row">
+                <div class="flex-item " id="bidud">?נגמר הבידוד</div>
+                <div class="flex-item title" id="not_yet" style="visibility: hidden;">Not yet!</div>
+            </div>
         </div>
     </div>
-    
     <script>
         document.getElementById("bidud").addEventListener("click", () => {
-            document.getElementById("not_yet").style.visibility = "visible";
+            setTimeout(() => {
+                document.getElementById("not_yet").style.visibility = "visible";
+            }, 600)
+
         })
     </script>
 </body>
